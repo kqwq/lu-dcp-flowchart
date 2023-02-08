@@ -3,7 +3,7 @@
 
 import { courses as c } from "./courses";
 const electives = {
-  "technicalStudies": [  
+  "technicalStudiesAssociatesElectives": [  
   "CARP",
     "ELTC",
     "HVAC",
@@ -99,18 +99,22 @@ const degreeTree = {
               "genAdd": [
                 e.busi101Or201,
                 c.MATH114,
-                c.PSYC101,
-                c.SOCI200
+                e.psyc101OrSoci200,
               ],
               "genRemove": [
-                e.criticalThinking
-              ]
+                e.criticalThinking,
+                e.socialScience,
+              ],
               "major": {
                 "Core": [
                   c.BUSI223,
                   c.CRFT101,
                   c.ECON110,
                   c.HLTH205,
+                  e.technicalStudiesAssociatesElectives,
+                  e.technicalStudiesAssociatesElectives,
+                  e.technicalStudiesAssociatesElectives,
+                  e.technicalStudiesAssociatesElectives,
                 ]
               }
             }
