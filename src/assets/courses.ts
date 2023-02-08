@@ -1,4 +1,15 @@
-export const courses = {
+
+type coursesType = {
+  title: string,
+  credits: number,
+  prereqs?: string,
+  specialPrereqs?: Array<string>,
+  offered?: string,
+  note?: string,
+}
+
+
+export const courses: Record<string,coursesType> = {
   "ACCT209": {
     "title": "Survey of Accounting and Finance",
     "credits": 3,
@@ -8975,19 +8986,20 @@ export const courses = {
     "title": "Software Engineering Management",
     "credits": 3,
     "prereqs": "CSIS 215 or CSCN 215",
-    "offered": "Resident"
+    "specialPrereqs": ["30 CS Credits", "Dept Chair"],
+    "offered": "Resident Spring only",
   },
   "CSCN481": {
     "title": "Computer Sciences Practicum I",
     "credits": 3,
     "prereqs": "((CSIS 471 or CSCN 471) and (CSIS 326 or CSCN 326))",
-    "offered": "Resident"
+    "offered": "Resident Fall only"
   },
   "CSCN482": {
     "title": "Computer Sciences Practicum II",
     "credits": 3,
     "prereqs": "CSIS 481 or CSCN 481",
-    "offered": "Resident"
+    "offered": "Resident Spring only"
   },
   "CSCN485": {
     "title": "Cybersecurity Practicum I",
