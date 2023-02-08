@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Associate of Applied Science in Technical Studies",
+    "year": "2022-2023",
+    "dateRevised": "2022-02-18T05:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 65,
+    "major": {
+      "Core": [
+        c.BUSI223,
+        c.CRFT101,
+        c.ECON110,
+        c.HLTH205,
+        c.BUSI101,
+        c.BUSI201,
+        c.MATH114,
+        c.PSYC101,
+        c.SOCI200
+      ]
+    }
+  },
+  {
+    "name": "Bachelor of Science in Business Administration",
+    "year": "2022-2023",
+    "dateRevised": "2022-04-28T04:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.BUSI201,
+        c.INQR101,
+        c.BUSI230,
+        c.BUSI240
+      ],
+      "Core": [
+        c.ACCT211,
+        c.ACCT212,
+        c.MATH114,
+        c.ACCT370,
+        c.BUSI301,
+        c.BUSI303,
+        c.BUSI310,
+        c.BUSI320,
+        c.RSCH201,
+        c.BUSI330,
+        c.BUSI342,
+        c.BUSI411,
+        c.BUSI472,
+        c.BUSI490,
+        c.ECON213,
+        c.ECON214
+      ],
+      "Cognate": [
+        c.BUSI331,
+        c.BUSI332,
+        c.BUSI447,
+        c.BUSI453
+      ],
+      "FREE ELECTIVES": []
+    }
+  }
+]

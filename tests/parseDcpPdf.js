@@ -51,15 +51,14 @@ function extractCourseNumbers(text) {
 
 function writeDegreesToFile(filename) {
   // Replace "(\w{4})\s(\d{3})" with "c.(\1\2)"
-  const output = JSON.stringify(degrees, null, 2);
-  output.replace(/'(\w{4})\s(\d{3})'/gm, "c.$1$2");
+  let output = JSON.stringify(degrees, null, 2);
+  output = output.replace(/"(\w{4})\s(\d{3})"/gm, "c.$1$2");
   fs.writeFileSync(filename, output);
 }
 
 function inputCommand(input) {
   let firstWord = input.split(" ")[0];
-  let restOfInput = input.slice(input.indexOf(" "));
-  console.log(firstWord, restOfInput);
+  let restOfInput = input.slice(input.indexOf(" ") + 1);
 
   // If single-word input as file, do a special action
   switch (firstWord) {
@@ -80,17 +79,10 @@ function inputCommand(input) {
   }
 }
 
-// Listen for changes to the file "./tests/pdf.txt"
-fs.watchFile(watchFilename, (curr, prev) => {
+function extractDegreeFromText(allText) {
   // Extract all instances of "wwww ddd" from the file contents
   // allText is the entire text of the PDF (2 pages)
   // text is only the first page MINUS the "Notes" section AND the "Graduation Requirements" section
-  const allText = fs.readFileSync(watchFilename).toString();
-
-  if (allText.split("\n").length === 1) {
-    inputCommand(allText);
-    return;
-  }
 
   const text = allText.slice(0, allText.indexOf("Notes"));
   const major = {};
@@ -161,8 +153,27 @@ fs.watchFile(watchFilename, (curr, prev) => {
     totalHours: totalHours,
     major: major,
   };
-  console.log(1, degree);
-  degrees.push(degree);
+  return degree;
+}
 
-  // console.log(7, output);
+// Listen for changes to the file "./tests/pdf.txt"
+fs.watchFile(watchFilename, (curr, prev) => {
+  console.log("Detected file change");
+  try {
+    const allText = fs.readFileSync(watchFilename).toString();
+
+    if (allText.split("\n").length === 1) {
+      inputCommand(allText);
+      return;
+    } else {
+      const degree = extractDegreeFromText(allText);
+      console.log(degree);
+      console.log("Added degree " + degree.name);
+      degrees.push(degree);
+    }
+  } catch (e) {
+    console.log("Caught the following error:");
+    console.error(e);
+  }
 });
+console.log("Running");

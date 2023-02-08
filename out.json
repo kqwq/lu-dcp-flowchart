@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Associate of Applied Science in Technical Studies",
+    "year": "2022-2023",
+    "dateRevised": "2022-02-18T05:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 65,
+    "major": {
+      "Core": [
+        c.BUSI223,
+        c.CRFT101,
+        c.ECON110,
+        c.HLTH205,
+        c.BUSI101,
+        c.BUSI201,
+        c.MATH114,
+        c.PSYC101,
+        c.SOCI200
+      ]
+    }
+  }
+]

@@ -17,6 +17,8 @@ const electives = {
     culturalStudies: [],
     naturalScience: [],
     socialScience: [],
+    busi101Or201: [c.BUSI101, c.BUSI201],
+    psyc101OrSoci200: [c.PSYC101, c.SOCI200]
 }
 const e = electives;
 
@@ -46,18 +48,29 @@ enum DegreeType {
 
 // General ed
 const generalEdCourses = [
+  // Communication & Information Literacy
   c.ENGL101,
   e.communications,
   e.informationLiteracy,
+
+  // Technological Solutions & Quantitative Reasoning
   c.UNIV101,
   e.math114OrHigher,
   e.technologyCompetency,
+
+  // Critical Thinking
   c.RLGN105,
   e.criticalThinking,
+
+  // Civic & Global Engagement
   c.EVAN101,
   e.culturalStudies,
+  
+  // Social & Scientific Inquiry
   e.naturalScience,
   e.socialScience,
+
+  // Christianity & Contexts
   c.BIBL105,
   c.BIBL110,
   c.THEO201,
@@ -67,7 +80,7 @@ const generalEdCourses = [
 
 
 
-// For data input
+// For data input 
 const degreeTree = {
   university: "Liberty University",
   programs: [
@@ -78,16 +91,28 @@ const degreeTree = {
           college: College.CollegeOfAppliedStudiesAndAcademicSuccess,
           degrees: [
             {
-              degree: "Associate of Applied Science in Technical Studies",
-              type: "AAS",
-              totalHours: 65,
-              
-              major: 
-              
-              {
-                core: [c.BUSI223, c.CRFT101, c.ECON110, c.HLTH205, e.technicalStudies, e.technicalStudies, e.technicalStudies, e.technicalStudies],
+              "name": "Associate of Applied Science in Technical Studies",
+              "year": "2022-2023",
+              "dateRevised": "2022-02-18T05:00:00.000Z",
+              "dateEffective": "Catalog Term 2022-40",
+              "totalHours": 65,
+              "genAdd": [
+                e.busi101Or201,
+                c.MATH114,
+                c.PSYC101,
+                c.SOCI200
+              ],
+              "genRemove": [
+                e.criticalThinking
+              ]
+              "major": {
+                "Core": [
+                  c.BUSI223,
+                  c.CRFT101,
+                  c.ECON110,
+                  c.HLTH205,
+                ]
               }
-              
             }
           ]
         },
