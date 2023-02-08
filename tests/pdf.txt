@@ -1,0 +1,161 @@
+Revised: 03.31.2022 Effective: Catalog Term 2022-40
+Bachelor of Science in Computer Science
+General Cognate
+2022-2023 Degree Completion Plan
+Important: This degree plan is effective for those starting this degree program in fall 2022 through summer 2023. This degree plan will remain in
+effect for students who do not break enrollment or who do not change degree programs, concentrations or cognates.
+GENERAL EDUCATION/
+FOUNDATIONAL SKILLS REQUIREMENTS (46-49 hours)
+Course Hrs Sem Grade Course Hrs Sem Grade
+Communication & Information Literacy (13 hours)1 Major Foundational Courses (0-20 hours)
+ENGL 101 Composition & Rhetoric 3 BUSI 240 Organizational Behavior I4
+3
+INQR 101 Inquiry 101 1 CSCN 110 Introduction to Computer Sciences4
+3
+___________ Communications Elective 3 CSCN 111 Programming in C++ Beginner4
+3
+___________ Information Literacy Elective 3 ENGR 270 Technical Communication4
+3
+___________ Information Literacy Elective 3 MATH 131 Calculus & Analytical Geometry I4
+4
+PHYS 201 General Physics I4
+4
+Technological Solutions & Quantitative Reasoning (5-8 hours)1
+UNIV 101 Foundational Skills 1 MAJOR
+MATH Math Elective (MATH 114 or higher) 4 Core (42 hours)
+___________ Technology Competency2
+0-3 CSCN 112 Programming in C++ Advanced5
+3
+CSCN 215 Data Structures & Algorithms Using C++5
+3
+Critical Thinking (8 hours)1 CSCN 230 Business Data Communications & Networks5
+3
+RLGN 105 Intr Bwvw/Contemp Moral Issues 3
+2 CSCN 326 Database Design & Management5
+3
+RSCH 201 Research 201 3 CSCN 342 Computer Architecture5
+3
+___________ Critical Thinking Elective 3 CSCN 345 Linux Operating Systems5
+3
+CSCN 352 Windows System Administration5
+3
+Civic & Global Engagement (5 hours)1 CSCN 355 Network Architecture, Protocols, & Theory5
+3
+EVAN 101 Evangelism & Christian Life3
+2 CSCN 434 Program Language Design & Comp Theory5
+3
+___________ Cultural Studies Elective 3 CSCN 443 Operating Systems Design5
+3
+CSCN 461 Aspects of Computer Security - Defensive5
+3
+Social & Scientific Inquiry (7 hours)1 CSCN 471 Software Engineering Management5
+3
+___________ Natural Science Elective 4 CSCN 481 Computer Science Practicum I
+5
+3
+___________ Social Science Elective 3 CSCN 482 Computer Science Practicum II5
+3
+Christianity & Contexts (8 hours)1 Cognate (12 hours)
+BIBL 105 Old Testament Survey 2 CSCN 354 Fundamentals of Distributed Systems 5
+3
+BIBL 110 New Testament Survey 2 CSCN CSCN Elective5,6
+3
+THEO 201 Theology Survey I3
+2 CSCN CSCN Elective5,6
+3
+THEO 202 Theology Survey II3
+2 CSCN CSCN Programming Language Elective5,7
+3
+Quantitative Studies Courses (13 hours)
+MATH 128 Elem. Functions & Coordinate Geometry8
+4
+MATH 211 Introduction to Statistical Analysis 3
+MATH 250 Introduction to Discrete Mathematics 3
+MATH 350 Discrete Mathematics 3
+Lab Sciences Courses (4 hours)
+Notes ___________ Lab Science Elective9
+4
+All applicable prerequisites must be met
+1Refer to the list of approved general education electives at www.liberty.edu/gened Technical Elective Courses (3 hours)10
+before enrolling in foundational skillsrequirements ___________ _______________________________
+2All students must pass the Computer Assessment OR complete applicable INFT course;
+refer to www.liberty.edu/computerassessment for more information
+3
+Students transferring in 45 or more UG credit hours will have the requirements of RLGN
+105 & EVAN 101 waived; Students transferring in 60 or more UG credit hours will also
+have the requirements of THEO 201 & THEO 202 waived
+4Courses may also fulfill select General Education Requirements. Please refer to the list of
+approved general education electives at www.liberty.edu/gened
+5
+Students are required to take these courses residentially in support of ABET accreditation.
+Exceptions are on a case-by-case basis and require ABET coordinator review and Department
+Chair approval.
+6Choose any 300-400 level CSCN course not already required by the degree
+7Choose one of the following Programming Language courses: CSCN (or CSIS) 209, 212,
+244, 312, 315, 316, or 354, or BMIT 212. Other languages may be approved by the Graduation Requirements
+department chair. 120 Total Hours
+8Any student entering the major directly into MATH 131 will require a 4 credit MATH 2.0 Overall grade point average
+Elective to substitute in place of MATH 128 (for example, MATH 132 may sub for credit) 30 Hours must be upper-level courses (300-400 level)
+9Choose any science course which includes a lab component. If choosing a Physics course, it Grade of ‘C’ Minimum required for all courses in the major, quantitative studies, lab
+must be PHYS 201 and 202L, or a higher level Physics course. PHYS 101 and 103 are not science, technical elective, and major foundational sections
+allowable. 25% Of major, core, and cognate taken through Liberty University
+10Choose from: BUSI 300, 301, 313, 424, 427, any 200-400 level Computer Science course, 30 Hours must be completed through Liberty University
+any 200-400 level Engineering course (except ENGR 210), or any Advanced Math course Grad App Submission of Degree Completion Application must be completed
+(must be MATH 132 or higher) not already required by the degree. within the last semester of a student's anticipated graduation date
+Suggested Course Sequence on second page CSER All requirements must be satisfied before a degree will be awarded
+Revised: 03.31.2022 Effective: Catalog Term 2022-40
+SUGGESTED COURSE SEQUENCE
+FRESHMAN YEAR
+First Semester Second Semester
+ENGL 101 3 BIBL 105 2
+EVAN 101 2 RSCH 201 3
+INQR 101 1 UNIV 101 1
+RLGN 105 2 Information Literacy Elective1
+[CSCN 111] 3
+Information Literacy Elective1
+[CSCN 110] 3 Math Elective1
+[MATH 131] 4
+Technology Competency2 0-3 CSCN 230 3
+MATH 1283 4 CSER 0
+CSER 0 Total 16
+Total15-18
+SOPHOMORE YEAR
+BIBL 110 2 Social Science Elective1
+[BUSI 240] 3
+Communications Elective1
+[ENGR 270] 3 CSCN 215 3
+CSCN 112 3 CSCN 352 3
+CSCN 345 3 CSCN 355 3
+MATH 250 3 MATH 350 3
+CSER 0 CSER 0
+Total 14 Total 15
+JUNIOR YEAR
+Natural Science Elective1
+[PHYS 201] 4 CSCN 326 3
+CSCN 342 3 CSCN 354 3
+CSCN 461 3 CSCN 471 3
+MATH 211 3 Computer Science Elective5 3
+Computer Science Programming Elective4 3 Lab Science Elective6 4
+CSER 0 CSER 0
+Total 16 Total 16
+SENIOR YEAR
+THEO 201 2 THEO 202 2
+CSCN 434 3 Critical Thinking Elective1 3
+CSCN 443 3 Cultural Studies Elective1 3
+CSCN 481 3 CSCN 482 3
+Computer Science Elective5 3 Technical Elective7 3
+CSER 0 CSER 0
+Total 14 Total 14
+Notes
+1Refer to the list of approved general education electives at www.liberty.edu/gened before enrolling in foundational skillsrequirements
+2All students must pass the Computer Assessment OR complete applicable INFT course; refer to www.liberty.edu/computerassessment for more
+information
+3Any student entering the major directly into MATH 131 will require a 4 credit MATH Elective to substitute in place of MATH 128 (for example,
+MATH 132 may sub for credit)
+4Choose one of the following Programming Language courses: CSCN (or CSIS) 209, 212, 244, 312, 315, 316, or 354, or BMIT 212. Other
+languages may be approved by the department chair.
+5Choose any 300-400 level CSCN course not already required by the degree.
+6Choose any science course which includes a lab component. If choosing a Physics course, it must be PHYS 201 and 202L, or a higher level
+Physics course. PHYS 101 and 103 are not allowable.
+7Choose from: BUSI 300, 301, 313, 424, 427, any 200-400 level Computer Science course, any 200-400 level Engineering course (except
+ENGR 210), or any Advanced Math course (must be MATH 132 or higher) not already required by the degree.
