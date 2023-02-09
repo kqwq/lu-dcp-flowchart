@@ -18,7 +18,7 @@ This is one of my most ambitious projects yet - a tool to calculate the _absolut
 
 IMPORTANT! THIS STEP IS NOT NECESSARY TO RUN THE APP LOCALLY. THIS STEP IS ONLY NECESSARY TO COLLECT DATA FROM THE LIBERTY WEBSITE. THE DATA IS ALREADY COLLECTED AND STORED IN THE REPOSITORY. IF YOU DON'T KNOW WHAT THIS MEANS, SKIP THIS STEP.
 
-Run `node get-data/downloadCurses.js` to download all courses from the Liberty University website. This will take a while, so be patient. The data will be stored in `data/courses.csv`.
+Run `node get-data/downloadCourses.js` to download all courses from the Liberty University website. This will take a while, so be patient. The data will be stored in `data/courses.csv`.
 
 Run `node get-data/csvToJson.js` to convert the CSV file into a JSON file. The data will be stored in the assets folder of the web app at `/src/assets/courses.ts`.
 
