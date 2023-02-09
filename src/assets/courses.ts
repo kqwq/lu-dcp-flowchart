@@ -8,8 +8,10 @@ type coursesType = {
   note?: string,
 }
 
+export type {coursesType};
 
-export const courses: Record<string,coursesType> = {
+// export const courses: Record<string,coursesType> = {
+  export const courses = {
   "ACCT209": {
     "title": "Survey of Accounting and Finance",
     "credits": 3,

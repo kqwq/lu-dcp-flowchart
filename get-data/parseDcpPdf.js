@@ -6,6 +6,7 @@
 // Done
 
 import fs, { write } from "fs";
+import { OFFERED } from "./parseDcp.config";
 
 const degrees = [];
 
@@ -20,6 +21,7 @@ const generalEdSections = [
   "Civic & Global Engagement",
   "Social & Scientific Inquiry",
   "Christianity & Contexts",
+  "FREE ELECTIVES",
 ];
 const generalEdCourses = [
   "UNIV 101",
@@ -30,6 +32,9 @@ const generalEdCourses = [
   "BIBL 110",
   "THEO 201",
   "THEO 202",
+  "MATH 114",
+  "INQR 101",
+  "RSCH 201",
 ];
 
 function extractSectionHeaders(text) {
@@ -42,17 +47,32 @@ function extractSectionHeaders(text) {
   return sections;
 }
 
-function extractCourseNumbers(text) {
+function extractAllCourseNumbers(text) {
   const regex = /([A-Z]{4})\s(\d{3})/g;
   const matches = text.matchAll(regex);
   const matchesArray = [...matches].map((match) => match[0]);
   return matchesArray;
 }
 
+function extractAlternativeCourseNumbers(text) {
+  // Example: "or MATH 114" returns "MATH 114"
+  const regex = /or\s(\w{4}\s\d{3})/g;
+  const matches = text.matchAll(regex);
+  const matchesArray = [...matches].map((match) => match[1]);
+  return matchesArray;
+}
+
 function writeDegreesToFile(filename) {
   // Replace "(\w{4})\s(\d{3})" with "c.(\1\2)"
+  // Replace classes with c.XXXXYYY
   let output = JSON.stringify(degrees, null, 2);
   output = output.replace(/"(\w{4})\s(\d{3})"/gm, "c.$1$2");
+
+  // Replace degreeType to enum
+  output = output.replace(
+    /"degreeType":\s"(\w+)"/gm,
+    '"degreeType": DegreeType.$1'
+  );
   fs.writeFileSync(filename, output);
 }
 
@@ -117,10 +137,23 @@ function extractDegreeFromText(allText) {
   // Extract course numbers from each section
   for (let i = 0; i < sectionTexts.length; i++) {
     let sectionText = sectionTexts[i];
-    let courseNumbers = extractCourseNumbers(sectionText);
+    let courseNumbers = extractAllCourseNumbers(sectionText);
     let nonGenEdCourseNumbers = courseNumbers.filter(
       (courseNumber) => !generalEdCourses.includes(courseNumber)
     );
+    let alternativeCourseNumbers = extractAlternativeCourseNumbers(sectionText);
+
+    // Use the alternative course numbers to group together courses
+    // For example, "MATH 101 or MATH 201" means that they should be grouped together
+    // as followed ["UNIV 101", ["MATH 101", "MATH 201"], ...]
+    for (let altCours of alternativeCourseNumbers) {
+      let ind = nonGenEdCourseNumbers.indexOf(altCours);
+      if (ind != -1) {
+        let combo = [nonGenEdCourseNumbers[ind - 1], altCours];
+        // Thanks Copilot for magically inserting this in
+        nonGenEdCourseNumbers.splice(ind - 1, 2, combo);
+      }
+    }
     major[nonGenEdSections[i]] = nonGenEdCourseNumbers;
   }
 
@@ -129,17 +162,44 @@ function extractDegreeFromText(allText) {
   let dateMMDDYYYY = textLines[0]
     .match(/Revised:\s+(\d+)\.(\d+)\.(\d+)/)
     .slice(1, 4);
-
-  console.log(dateMMDDYYYY);
   let dateRevised = new Date(
     dateMMDDYYYY[2],
     dateMMDDYYYY[0] - 1,
     dateMMDDYYYY[1]
   );
 
+  // Extract subName (cognate or concentration name e.g. Event Planning Cognate)
+  let subName = null;
+  if (textLines[3].includes("Degree Completion Plan")) {
+    subName = textLines[2].trim();
+  }
+
   // Extract total hours (get group 1)
   let totalHours = parseInt(allText.match(/(\d+)\sTotal\sHours/)[1]);
-  console.log(totalHours);
+
+  // Extract free elective hours
+  let freeElectiveHours = null;
+  let matches = text.match(/FREE\sELECTIVES\s\((\d+)-(\d+) hours\)/);
+  if (matches.length === 3) {
+    let minHours = parseInt(matches[1]);
+    let maxHours = parseInt(matches[2]);
+    freeElectiveHours = [minHours, maxHours];
+  }
+
+  // Extract degree type (AA, AS, BA, BS, etc.)
+  let degreeType = null;
+  let degreeName = textLines[1].trim();
+  if (degreeName.includes("Associate of Arts")) {
+    degreeType = "AA";
+  } else if (degreeName.includes("Associate of Science")) {
+    degreeType = "AS";
+  } else if (degreeName.includes("Bachelor of Arts")) {
+    degreeType = "BA";
+  } else if (degreeName.includes("Bachelor of Science")) {
+    degreeType = "BS";
+  } else {
+    console.log("ERROR: Could not determine degree type");
+  }
 
   // Generate JSON output
   let degree = {
@@ -152,12 +212,22 @@ function extractDegreeFromText(allText) {
     dateEffective: textLines[0].split("Effective: ")[1].trim(),
     totalHours: totalHours,
     major: major,
+    offered: OFFERED,
   };
+  if (subName) {
+    degree.subName = subName;
+  }
+  if (freeElectiveHours) {
+    degree.freeElectiveHours = freeElectiveHours;
+  }
+  if (degreeType) {
+    degree.degreeType = degreeType;
+  }
   return degree;
 }
 
 // Listen for changes to the file "./tests/pdf.txt"
-fs.watchFile(watchFilename, (curr, prev) => {
+fs.watchFile(watchFilename, { interval: 500 }, (curr, prev) => {
   console.log("Detected file change");
   try {
     const allText = fs.readFileSync(watchFilename).toString();
