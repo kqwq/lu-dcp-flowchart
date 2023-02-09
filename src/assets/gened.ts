@@ -1,5 +1,5 @@
 import { courses as c, coursesType } from "./courses";
-import { electives as e } from "./degrees";
+import { electives as e } from "./electives";
 
 const associatesBase = [
     // Communication & Information Literacy
@@ -95,7 +95,7 @@ const gened  = {
     c.THEO201,
     c.THEO202,
   ],
-  BA: bachelorsBase,
+  BA: [ ...bachelorsBase, e.composition ],
   BS: bachelorsBase,
   AA: associatesBase,
   AS: associatesBase,

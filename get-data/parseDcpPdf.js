@@ -6,12 +6,12 @@
 // Done
 
 import fs, { write } from "fs";
-import { OFFERED } from "./parseDcp.config";
+import { COLLEGE_STR, OFFERED } from "./parseDcpConfig.js";
 
 const degrees = [];
 
-const watchFilename = "./tests/pdf.txt";
-const outputFilename = "./tests/pdf.json";
+const watchFilename = "./get-data/pdf.txt";
+const outputFilename = "./data/degrees.json";
 
 const generalEdSections = [
   "FOUNDATIONAL SKILLS REQUIREMENTS",
@@ -180,7 +180,7 @@ function extractDegreeFromText(allText) {
   // Extract free elective hours
   let freeElectiveHours = null;
   let matches = text.match(/FREE\sELECTIVES\s\((\d+)-(\d+) hours\)/);
-  if (matches.length === 3) {
+  if (matches && matches.length === 3) {
     let minHours = parseInt(matches[1]);
     let maxHours = parseInt(matches[2]);
     freeElectiveHours = [minHours, maxHours];
@@ -197,6 +197,8 @@ function extractDegreeFromText(allText) {
     degreeType = "BA";
   } else if (degreeName.includes("Bachelor of Science")) {
     degreeType = "BS";
+  } else if (degreeName.includes("Associate of Applied Science")) {
+    degreeType = "AAS";
   } else {
     console.log("ERROR: Could not determine degree type");
   }
@@ -213,6 +215,7 @@ function extractDegreeFromText(allText) {
     totalHours: totalHours,
     major: major,
     offered: OFFERED,
+    college: COLLEGE_STR,
   };
   if (subName) {
     degree.subName = subName;
@@ -238,8 +241,11 @@ fs.watchFile(watchFilename, { interval: 500 }, (curr, prev) => {
     } else {
       const degree = extractDegreeFromText(allText);
       console.log(degree);
-      console.log("Added degree " + degree.name);
+      console.log(
+        "Added degree " + degree.name + " and saved to " + outputFilename
+      );
       degrees.push(degree);
+      writeDegreesToFile(outputFilename);
     }
   } catch (e) {
     console.log("Caught the following error:");

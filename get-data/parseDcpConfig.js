@@ -16,6 +16,6 @@ let College = {
 };
 
 const OFFERED = "Residential"; // Either 'Residential' or 'Online'
-const COLLEGE_STR = College.CollegeOfAppliedStudiesAndAcademicSuccess; // See above
+const COLLEGE_STR = College.CollegeOfArtsAndSciences; // See above
 
 export { OFFERED, COLLEGE_STR };

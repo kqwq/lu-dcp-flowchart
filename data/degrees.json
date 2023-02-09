@@ -1,0 +1,304 @@
+[
+  {
+    "name": "Bachelor of Science in Fashion",
+    "year": "2022-2023",
+    "dateRevised": "2022-02-18T05:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.CHEM105
+      ],
+      "Core": [
+        c.FACS103,
+        c.FACS320,
+        c.FACS350,
+        c.FACS403,
+        c.FACS455,
+        c.FACS499
+      ],
+      "Concentration": [
+        c.ACCT209,
+        c.ARTS211,
+        c.BUSI310,
+        c.BUSI330,
+        c.FACS222,
+        c.FACS225,
+        c.FACS322,
+        c.FACS329,
+        c.FACS420,
+        c.FACS422,
+        c.FACS429
+      ]
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "subName": "Fashion Design Concentration",
+    "freeElectiveHours": [
+      21,
+      28
+    ],
+    "degreeType": DegreeType.BS
+  },
+  {
+    "name": "Bachelor of Science in Fashion",
+    "year": "2022-2023",
+    "dateRevised": "2022-02-18T05:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.CHEM105
+      ],
+      "Core": [
+        c.FACS103,
+        c.FACS320,
+        c.FACS350,
+        c.FACS403,
+        c.FACS455,
+        c.FACS499
+      ],
+      "Concentration": [
+        c.ACCT209,
+        c.BUSI310,
+        c.BUSI330,
+        c.ECON214,
+        c.FACS222,
+        c.FACS225,
+        c.FACS324,
+        c.FACS325,
+        c.FACS351,
+        c.FACS353,
+        c.FACS423
+      ]
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "subName": "Fashion Merchandising Concentration",
+    "freeElectiveHours": [
+      21,
+      28
+    ],
+    "degreeType": DegreeType.BS
+  },
+  {
+    "name": "Bachelor of Science in History",
+    "year": "2022-2023",
+    "dateRevised": "2022-03-04T05:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.GEOG200,
+        c.HIUS221
+      ],
+      "Core": [
+        [
+          c.HIEU201,
+          c.HIEU202
+        ],
+        c.HIST300
+      ],
+      "Elective": [
+        c.HIST491,
+        c.HIUS222
+      ],
+      "History Elective": [],
+      "HIWD World History Elective": []
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "freeElectiveHours": [
+      31,
+      40
+    ],
+    "degreeType": DegreeType.BS
+  },
+  {
+    "name": "Bachelor of Science in Interdisciplinary Studies",
+    "year": "2022-2023",
+    "dateRevised": "2022-04-27T04:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Core": [
+        c.INDS491
+      ]
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "freeElectiveHours": [
+      25,
+      28
+    ],
+    "degreeType": DegreeType.BS
+  },
+  {
+    "name": "Bachelor of Science in Interior Design",
+    "year": "2022-2023",
+    "dateRevised": "2022-02-08T05:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.ARTS205
+      ],
+      "Core": [
+        c.ARTS114,
+        c.ARTS211,
+        c.FACS113,
+        c.FACS140,
+        c.FACS200,
+        c.FACS231,
+        c.FACS241,
+        c.FACS243,
+        c.FACS250,
+        c.FACS300,
+        c.FACS343,
+        c.FACS345,
+        c.FACS404,
+        c.FACS442,
+        c.FACS445,
+        c.FACS460,
+        c.FACS485,
+        c.FACS499
+      ]
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "freeElectiveHours": [
+      12,
+      18
+    ],
+    "degreeType": DegreeType.BS
+  },
+  {
+    "name": "Bachelor of Science in Mathematics",
+    "year": "2022-2023",
+    "dateRevised": "2022-06-22T04:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.CSIS110,
+        c.CSIS111,
+        c.ENGR270,
+        c.MATH131,
+        c.PHYS231
+      ],
+      "Core": [
+        c.MATH132,
+        c.MATH133,
+        c.MATH200,
+        c.MATH221,
+        c.MATH231,
+        c.MATH311,
+        c.MATH321,
+        c.MATH331,
+        c.MATH421,
+        c.MATH431,
+        c.MATH450
+      ]
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "freeElectiveHours": [
+      15,
+      35
+    ],
+    "degreeType": DegreeType.BS
+  },
+  {
+    "name": "Bachelor of Science in Military Studies",
+    "year": "2022-2023",
+    "dateRevised": "2022-02-18T05:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.GEOG200,
+        c.GOVT200,
+        c.HIUS222
+      ],
+      "Core": [
+        c.ETHC280,
+        c.GEOG380,
+        [
+          c.GOVT381,
+          c.GOVT483
+        ],
+        c.HIEU390,
+        c.HIUS380,
+        c.HIWD375,
+        c.HIWD376,
+        c.MISC300,
+        c.MISC350,
+        c.MISC491
+      ],
+      "Cognate": []
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "subName": "Leadership Cognate",
+    "freeElectiveHours": [
+      25,
+      37
+    ],
+    "degreeType": DegreeType.BS
+  },
+  {
+    "name": "Bachelor of Science in Social Sciences",
+    "year": "2022-2023",
+    "dateRevised": "2022-05-06T04:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.ECON213,
+        c.GEOG200,
+        c.HIUS221
+      ],
+      "Core": [
+        c.GOVT200,
+        c.HIUS222,
+        c.HIUS330,
+        c.HIUS360,
+        c.HIST300,
+        c.HIST491
+      ]
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "freeElectiveHours": [
+      28,
+      40
+    ],
+    "degreeType": DegreeType.BS
+  },
+  {
+    "name": "Bachelor of Science in Writing",
+    "year": "2022-2023",
+    "dateRevised": "2022-02-08T05:00:00.000Z",
+    "dateEffective": "Catalog Term 2022-40",
+    "totalHours": 120,
+    "major": {
+      "Major Foundational Courses": [
+        c.ENGL102
+      ],
+      "Core": [
+        c.ENGL333,
+        c.WRIT201,
+        c.WRIT305,
+        c.WRIT402,
+        c.WRIT491
+      ]
+    },
+    "offered": "Residential",
+    "college": "College of Arts & Sciences",
+    "freeElectiveHours": [
+      34,
+      40
+    ],
+    "degreeType": DegreeType.BS
+  }
+]
