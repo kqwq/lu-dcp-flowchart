@@ -12,8 +12,7 @@ import { degreeNamesByCollege } from '../assets/degrees';
 
 
 
-const CourseSelectionInput = () => {
-  const inputRef = React.useRef(null)
+const DCPSelectionInput = ({ setMajor }) => {
 
   return (
     <FormControl w={{
@@ -22,9 +21,10 @@ const CourseSelectionInput = () => {
     }}
     >
       <FormLabel>Degree Completion Plan</FormLabel>
-      <AutoComplete openOnFocus suggestWhenEmpty selectOnFocus
+      <AutoComplete openOnFocus suggestWhenEmpty selectOnFocus onChange={setMajor
+      }
       >
-        <AutoCompleteInput variant="filled" size="lg" ref={inputRef} />
+        <AutoCompleteInput variant="filled" size="lg" />
         <AutoCompleteList w={"full"} maxH={"300px"} overflow={"auto"}  >
           {Object.entries(degreeNamesByCollege).map(([continent, countries], co_id) => (
             <AutoCompleteGroup key={co_id} showDivider>
@@ -49,4 +49,4 @@ const CourseSelectionInput = () => {
   )
 }
 
-export default CourseSelectionInput
+export default DCPSelectionInput
