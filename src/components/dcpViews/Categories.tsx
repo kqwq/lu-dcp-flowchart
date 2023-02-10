@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Heading, Text, VStack } from '@chakra-ui/react'
+import { Box, Flex, Grid, Heading, HStack, Stack, Text, VStack } from '@chakra-ui/react'
 import Course from '../Course'
 import { degrees } from '../../assets/degrees'
 import { gened } from '../../assets/gened'
@@ -20,11 +20,14 @@ const GenEdSection = ({ degree }) => {
     return showError("Error: cannot find gen ed courses")
   }
   return (
-    <VStack >
+    <VStack>
       <Heading size="md" mt="4" >General Education</Heading>
-      {
-        genedCourses.map(c => <Course courseObj={c} clickedCallback={() => { }} key={c.code} />)
-      }
+
+      <Flex bg="gray.100" flexWrap={"wrap"} p={5} justify="center" >
+        {
+          genedCourses.map(c => <Course courseObj={c} clickedCallback={() => { }} key={c.code} />)
+        }
+      </Flex>
     </VStack>)
 }
 
@@ -41,14 +44,17 @@ const MajorSection = ({ degree }) => {
               <Box key={i} w="100%" h="100%" bg="white" borderRadius="full" display="flex" alignItems="center" justifyContent="center" >
                 <Heading size="md" mt="4">{category}</Heading>
               </Box>
-              {
-                majorCourses[category].map((course, i) => {
-                  return (
-                    <Course key={i} courseObj={course} clickedCallback={() => { }
-                    } />
-                  )
-                })
-              }
+              <Flex bg="gray.100" w="100%" flexWrap={"wrap"} p={5} justify="center" >
+                {
+
+                  majorCourses[category].map((course, i) => {
+                    return (
+                      <Course key={i} courseObj={course} clickedCallback={() => { }
+                      } />
+                    )
+                  })
+                }
+              </Flex>
             </>
 
           )
@@ -81,7 +87,16 @@ const Categories = ({ major, setCoursesFinished }) => {
       <Box w="100%" h="100%" bg="white" borderRadius="full" display="flex" alignItems="center" justifyContent="center" >
 
         {/* Split grid into 1 or 2 columns bet */}
-        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+        <Grid templateColumns={
+          {
+            base: "repeat(1, 1fr)",
+            md: "repeat(2, 1fr)",
+          }
+        } gap={6}
+          p={5}
+          maxW="1200px"
+        >
+
           <GenEdSection degree={degree} />
 
           <MajorSection degree={degree} />

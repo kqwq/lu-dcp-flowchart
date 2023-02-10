@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Button, Container, Heading, InputGroup, Text, VStack, Flex } from '@chakra-ui/react'
 import DCPSelectionInput from '../../components/DCPSelectionInput'
 import { useRouter } from 'next/router'
+import BackButton from '../../components/BackArrow'
 
 
 const Page = () => {
@@ -17,6 +18,7 @@ const Page = () => {
         <Flex justify="center" align="center" w="full"  >
           <VStack spacing={10} >
             <Box w="100%">
+              <BackButton destination="/" />
               <Heading as="h1" size="lg" mb="4" >1. Select a major</Heading>
             </Box>
 

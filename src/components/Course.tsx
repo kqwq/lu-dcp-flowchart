@@ -10,13 +10,40 @@ const Course = ({ courseObj, clickedCallback }) => {
     clickedCallback(courseObj)
   }
 
+  let borderStyle = "2px solid";
+  let colorScheme = "blue";
+  let showTitle = courseObj?.code;
+  let tooltipText = courseObj?.title;
+
+  // There are 3 types of courseObj:
+  // SINGLE COURSE    { code: "CS 1110", title: "Introduction to Computing Using Python" }
+  // MULTIPLE CHOICE  [ { ... }, { ... } ]
+  // ELECTIVE         [ "Math Elective", { ... }, { ... }, { ... } ]
+
+  if (Array.isArray(courseObj)) {
+    if (typeof courseObj[0] === "string") {
+      // Elective
+      colorScheme = "purple";
+      showTitle = courseObj[0];
+    } else {
+      // Multiple choice
+      showTitle = courseObj.map((course) => course.code).join(" or ");
+      tooltipText = courseObj.map((course) => course.code + " - " + course.title).join("\n");
+    }
+  } else {
+    // Single course
+  }
+
   return (
-    <Tooltip label={courseObj?.title} aria-label={courseObj?.title} placement="top">
+    <Tooltip label={tooltipText} aria-label={tooltipText} placement="top" whiteSpace={"pre-wrap"}>
       <Button variant={
         isSelected ? "solid" : "outline"
 
       }
-        borderRadius="full" onClick={onClick} colorScheme="purple" size="sm"  >{courseObj?.code || courseObj.join(" or ")}</Button>
+        m={1}
+        border={borderStyle}
+        minH="40px" h="40px"
+        borderRadius="full" onClick={onClick} colorScheme={colorScheme} size="sm">{showTitle}</Button>
     </Tooltip>
 
 
