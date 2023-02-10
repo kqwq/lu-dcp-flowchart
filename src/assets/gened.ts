@@ -1,7 +1,7 @@
 import { courses as c, coursesType } from "./courses";
-import { electives as e } from "./electives";
+import { DegreeType, electives as e } from "./electives";
 
-const associatesBase = [
+const associatesCommon = [
     // Communication & Information Literacy
     c.ENGL101,
     e.communications,
@@ -30,7 +30,7 @@ const associatesBase = [
     c.THEO201,
     c.THEO202,
 ]
-const bachelorsBase = [
+const bachelorsCommon = [
  // Communication & Information Literacy
  c.ENGL101,
  c.INQR101,
@@ -66,7 +66,7 @@ const bachelorsBase = [
 // General ed
 // const gened:Record<string,Array<coursesType|any>> = {
 const gened  = {
-  AAS: [
+  [DegreeType.AAS]: [
     // Communication & Information Literacy
     c.ENGL101,
     e.communications,
@@ -95,10 +95,10 @@ const gened  = {
     c.THEO201,
     c.THEO202,
   ],
-  BA: [ ...bachelorsBase, e.composition ],
-  BS: bachelorsBase,
-  AA: associatesBase,
-  AS: associatesBase,
+  [DegreeType.BA]: [ ...bachelorsCommon, e.composition ],
+  [DegreeType.BS]: bachelorsCommon,
+  [DegreeType.AA]: associatesCommon,
+  [DegreeType.AS]: associatesCommon,
 };
 
 
