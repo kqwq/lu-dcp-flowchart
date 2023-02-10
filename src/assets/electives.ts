@@ -86,5 +86,4 @@ const laf = [ // Liberal Arts Focus
 ]
 
 
-export  { DegreeType,laf}
-export { electives }
+export  { DegreeType,laf,electives,College }

@@ -1,5 +1,6 @@
 import fs from "fs";
 
+const sourceFilename = "./data/courses.csv";
 const writeToFilename = "./src/assets/courses.ts";
 const p = (str) => {
   return str;
@@ -32,7 +33,7 @@ function CSVtoArray(text) {
 }
 
 async function main() {
-  let csv = fs.readFileSync("liberty.csv");
+  let csv = fs.readFileSync(sourceFilename);
   let lines = csv.toString().split("\n").slice(1);
   let courses = {};
 
@@ -54,6 +55,7 @@ async function main() {
     ] = arr;
     let obj = {
       title: p(title),
+      code: p(code),
       credits: parseInt(credits),
     };
     if (prereqs) obj.prereqs = p(prereqs);

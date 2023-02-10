@@ -26,6 +26,10 @@ We are done generating the courses data. Now let's generate the degree completio
 
 Run `node get-data/parseDcpPdf.js` to parse the PDF file containing the degree completion plan. The data will be stored in the assets folder of the web app at `/src/assets/degreeTree.ts`.
 
+### Website
+
+This is a Next.js app built with Chakra UI and TypeScript. A previous iteration of this site used Vite, but I wasn't a fan of their routing system and it was too much of a hassle to configure. It also seemed to conflict with some of the Chakra UI components (specifically @choc-ui/autocomplete).
+
 ## Pages
 
 ### Welcome

@@ -862,3 +862,16 @@ const degrees = [
   // Done with the College of Arts & Sciences majors
   
 ]
+
+const degreeNamesByCollege = {};
+for (let d of degrees) {
+  if (!degreeNamesByCollege[d.college]) {
+    degreeNamesByCollege[d.college] = [];
+  }
+  let name = d.name;
+  if (d.subName) name += ` (${d.subName})`;
+  degreeNamesByCollege[d.college].push(name);
+}
+
+
+export { degrees,degreeNamesByCollege }
