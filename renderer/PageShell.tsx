@@ -1,6 +1,6 @@
 import React from 'react'
 import type { PageContext } from './types'
-import Navbar from '../src/components/Navbar'
+import Navbar from '../components/Navbar'
 import { ChakraProvider } from '@chakra-ui/react'
 
 export { PageShell }
