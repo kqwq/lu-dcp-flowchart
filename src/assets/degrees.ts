@@ -863,7 +863,10 @@ const degrees = [
   
 ]
 
-const degreeNamesByCollege = {};
+type degreeNamesByCollegeType = {
+  [key: string]: string[];
+};
+const degreeNamesByCollege = {} as degreeNamesByCollegeType;
 for (let d of degrees) {
   if (!degreeNamesByCollege[d.college]) {
     degreeNamesByCollege[d.college] = [];
