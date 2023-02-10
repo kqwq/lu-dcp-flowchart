@@ -1,7 +1,7 @@
 import { courses as c, coursesType } from "./courses";
 import { DegreeType, electives as e } from "./electives";
 
-const associatesCommon = [
+const associatesBase = [
     // Communication & Information Literacy
     c.ENGL101,
     e.communications,
@@ -97,8 +97,8 @@ const gened  = {
   ],
   [DegreeType.BA]: [ ...bachelorsCommon, e.composition ],
   [DegreeType.BS]: bachelorsCommon,
-  [DegreeType.AA]: associatesCommon,
-  [DegreeType.AS]: associatesCommon,
+  [DegreeType.AA]: associatesBase,
+  [DegreeType.AS]: associatesBase,
 };
 
 
