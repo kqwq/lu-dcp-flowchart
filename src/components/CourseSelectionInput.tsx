@@ -8,52 +8,44 @@ import {
   AutoCompleteList,
 } from "@choc-ui/chakra-autocomplete";
 import { Flex, FormControl, FormHelperText, FormLabel } from "@chakra-ui/react";
+import { degreeNamesByCollege } from '../assets/degrees';
 
 
 
 const CourseSelectionInput = () => {
-  const continents = {
-    africa: ["nigeria", "south africa"],
-    asia: ["japan", "south korea"],
-    europe: ["united kingdom", "russia"],
-  };
-
-  const countries = [
-    "nigeria",
-    "japan",
-    "india",
-    "united states",
-    "south korea",
-  ];
+  const inputRef = React.useRef(null)
 
   return (
-    <Flex pt="48" justify="center" align="center" w="full">
-      <FormControl w="60">
-        <FormLabel>Olympics Soccer Winner</FormLabel>
-        <AutoComplete openOnFocus>
-          <AutoCompleteInput variant="filled" />
-          <AutoCompleteList>
-            {Object.entries(continents).map(([continent, countries], co_id) => (
-              <AutoCompleteGroup key={co_id} showDivider>
-                <AutoCompleteGroupTitle textTransform="capitalize">
-                  {continent}
-                </AutoCompleteGroupTitle>
-                {countries.map((country, c_id) => (
-                  <AutoCompleteItem
-                    key={c_id}
-                    value={country}
-                    textTransform="capitalize"
-                  >
-                    {country}
-                  </AutoCompleteItem>
-                ))}
-              </AutoCompleteGroup>
-            ))}
-          </AutoCompleteList>
-        </AutoComplete>
-        <FormHelperText>Who do you support.</FormHelperText>
-      </FormControl>
-    </Flex>
+    <FormControl w={{
+      base: "100%",
+      sm: "550px"
+    }}
+    >
+      <FormLabel>Degree Completion Plan</FormLabel>
+      <AutoComplete openOnFocus suggestWhenEmpty selectOnFocus
+      >
+        <AutoCompleteInput variant="filled" size="lg" ref={inputRef} />
+        <AutoCompleteList w={"full"} maxH={"300px"} overflow={"auto"}  >
+          {Object.entries(degreeNamesByCollege).map(([continent, countries], co_id) => (
+            <AutoCompleteGroup key={co_id} showDivider>
+              <AutoCompleteGroupTitle textTransform="capitalize">
+                {continent}
+              </AutoCompleteGroupTitle>
+              {countries.map((country, c_id) => (
+                <AutoCompleteItem
+                  key={c_id}
+                  value={country}
+                  textTransform="capitalize"
+                >
+                  {country}
+                </AutoCompleteItem>
+              ))}
+            </AutoCompleteGroup>
+          ))}
+        </AutoCompleteList>
+      </AutoComplete>
+      <FormHelperText>Incomplete list.</FormHelperText>
+    </FormControl >
   )
 }
 
