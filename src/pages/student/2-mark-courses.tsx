@@ -19,10 +19,10 @@ const Page = () => {
         <Flex justify="center" align="center" w="full"  >
           <VStack spacing={10} >
             <Box w="100%">
-              <Heading as="h1" size="2xl" mb="4" >2. Mark Courses</Heading>
+              <Heading as="h1" size="2xl" mb="4" >2. Courses</Heading>
             </Box>
 
-            <Categories major={major} />
+            <Categories major={major} setCoursesFinished={setCoursesFinished} />
 
             <Flex w="100%" justify="right">
               <Button colorScheme="blue" size="lg" onClick={() => {

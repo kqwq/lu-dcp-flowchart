@@ -36,7 +36,13 @@ const Index = () => {
             <Button size="lg" onClick={() => {
               router.push('/student/1-select-major')
             }}>Student</Button>
-            <Button size="lg" ml={5}>Faculty</Button>
+            <Button size="lg" ml={5}
+              onClick={
+                () => {
+                  router.push("/faculty")
+                }
+              }
+            >Faculty</Button>
           </InputGroup>
         </VStack>
       </Box >
